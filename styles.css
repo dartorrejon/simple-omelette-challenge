@@ -1,0 +1,144 @@
+/* Fonts Definition */
+@font-face{
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Young Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+:root {
+    font-family: 'Outfit';
+    font-weight: 400;
+
+    /* Primary Colors */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+}
+
+header > img{
+    aspect-ratio: 164/75;
+    width: 100%;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    margin: 2em 1.5em;
+}
+ h1,h2{
+    font-family: 'Young Serif';
+}
+
+.preparation{
+    background-color: var(--rose-white);
+    padding: 1em;
+}
+.preparation-title, .preparation-inst > li::marker{
+    color: var(--dark-raspberry);
+}
+.preparation-title{
+    font-family: 'Outfit';
+    font-size: 18px;
+}
+.preparation-inst{
+    color: #000;
+    margin-inline: 1.5em;
+    margin-block: .8em;
+}
+.preparation-inst > li{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.preparation-inst > li >span{
+    font-weight: bold;
+}
+
+.ingredients-title, .ingredients-list > li::marker{
+    color: var(--nutmeg);
+}
+.ingredients-list{
+    margin: .8em 1.5em;
+}
+.ingredients-list > li{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+hr{
+    color: var(--light-grey);
+   opacity: .4;
+}
+
+.instructions-title, .instructions-list > li::marker{
+    color: var(--nutmeg);
+}
+.instructions-list > li::marker{
+    font-weight: bold;
+}
+.instructions-list{
+    margin: .8em 1.5em;
+}
+.instructions-list > li{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.instructions-list > li > span{
+    font-weight: bold;
+}
+
+.nutrition{
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    margin-inline: 5px;
+}
+
+.nutrition-title, .nutrition-values > div:nth-child(2){
+    color: var(--nutmeg);
+    font-weight: 700;
+}
+.nutrition-values > div:nth-child(1){
+    color: var(--wenge-brown);
+}
+.nutrition-table{
+    display: grid;
+    grid-template-columns: 1fr ;
+    row-gap: .8em;
+}
+
+.nutrition-values{
+    padding-inline: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
