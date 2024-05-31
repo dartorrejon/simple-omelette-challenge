@@ -5,15 +5,12 @@
     font-weight: 400;
     font-style: normal;
 }
-
 @font-face{
     font-family: 'Young Serif';
     src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
     font-weight: 400;
     font-style: normal;
 }
-
-
 
 :root {
     font-family: 'Outfit';
@@ -40,10 +37,10 @@
     box-sizing: border-box;
 }
 body{
-    font-size: 16px;
     position: relative;
+    font-size: 16px;
+    min-width: 320px; 
 }
-
 
 header > img{
     aspect-ratio: 164/75;
@@ -60,6 +57,12 @@ header > img{
     font-family: 'Young Serif';
 }
 
+hr{
+    color: var(--light-grey);
+   opacity: .4;
+}
+
+/* Preparation styles */
 .preparation{
     background-color: var(--rose-white);
     padding: 1em;
@@ -85,11 +88,11 @@ header > img{
     color: var(--dark-charcoal);
 }
 
+/* Ingrediets Styles */
 .ingredients-title, .ingredients-list > li::marker{
     color: var(--nutmeg);
 }
 .ingredients-list{
-   
     margin: .8em 1.5em;
 }
 .ingredients-list > li{
@@ -97,11 +100,7 @@ header > img{
     margin-bottom: 10px;
 }
 
-hr{
-    color: var(--light-grey);
-   opacity: .4;
-}
-
+/* Instructions Styles */
 .instructions-title, .instructions-list > li::marker{
     color: var(--nutmeg);
 }
@@ -120,6 +119,7 @@ hr{
     color: var(--dark-charcoal);
 }
 
+/* Nutrition Styles */
 .nutrition{
     display: flex;
     flex-direction: column;
@@ -129,6 +129,8 @@ hr{
 
 .nutrition-title, .nutrition-values > div:nth-child(2){
     color: var(--nutmeg);
+}
+.nutrition-values > div:nth-child(2){
     font-weight: 700;
 }
 .nutrition-values > div:nth-child(1){
@@ -136,16 +138,17 @@ hr{
 }
 .nutrition-table{
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     row-gap: .8em;
 }
-
 .nutrition-values{
-    padding-inline: 25px;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-inline: 25px;
+    width: 100%;
 }
+
+/* Footer Styles */
 .attribution{
     position: absolute;
     bottom: -22px;
@@ -158,12 +161,11 @@ hr{
 
  @media only screen and (min-width: 720px){
     body{
-        
         display: grid;
         place-content: center;
         background-color: var(--rose-white);
     }
-
+    
     main{
         width: 700px;
         height: auto;
@@ -179,9 +181,11 @@ hr{
         object-fit: contain;
         overflow: hidden;
     }
+
     .preparation{
         border-radius: 20px;
     }
+
     .attribution{
         bottom: 20px;
     }
