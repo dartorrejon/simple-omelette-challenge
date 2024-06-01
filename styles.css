@@ -163,7 +163,7 @@ hr{
     body{
         display: grid;
         place-content: center;
-        background-color: var(--rose-white);
+        background-color: var(--eggshell);
     }
     
     main{
